@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Oasis - Find Your Next Favorite Anime</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-10">
+        <!-- Header -->
+        <header class="text-center mb-8 md:mb-12">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2">Anime Oasis</h1>
+            <p class="text-base sm:text-lg text-gray-400">Your gateway to the world of anime.</p>
+        </header>
+
+        <!-- Search Bar -->
+        <div class="max-w-2xl mx-auto mb-12">
+            <div class="relative">
+                <input type="text" id="searchInput" placeholder="Search for an anime..." class="w-full bg-gray-800 text-white border-2 border-gray-700 rounded-full py-3 pl-6 pr-28 focus:outline-none focus:border-indigo-500 transition-colors">
+                <button id="searchButton" class="absolute right-2 top-1/2 -translate-y-1/2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full transition-colors">
+                    Search
+                </button>
+            </div>
+        </div>
+        
+        <!-- Results Section -->
+        <main>
+            <h2 id="resultsTitle" class="text-xl sm:text-2xl font-bold text-white mb-6">Trending Now</h2>
+            <div id="loader" class="hidden w-16 h-16 border-8 border-gray-600 rounded-full mx-auto"></div>
+            <div id="errorMessage" class="hidden text-center text-red-400 text-xl py-10"></div>
+            <div id="animeResults" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
+                <!-- Anime cards will be injected here -->
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center mt-12 md:mt-16 text-gray-500">
+            <p>Links provided for search convenience.</p>
+            <p>&copy; 2024 Anime Oasis. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
